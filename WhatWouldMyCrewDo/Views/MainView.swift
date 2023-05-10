@@ -13,7 +13,25 @@ struct MainView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Main view")
+            Text("What Would My Crew Do?").padding()
+            
+            HStack {
+                Button("Rate Something") {
+                    WhatWouldMyCrewDoApp.changeView(to: ViewType.RateAndReviewView)
+                }
+                Button("Plan a Trip") {
+                    WhatWouldMyCrewDoApp.changeView(to: ViewType.PlanTripView)
+                }
+              
+            }
+            HStack {
+                Button("Manage Friends") {
+                    WhatWouldMyCrewDoApp.changeView(to: ViewType.ManageFriendsGroupView)
+                }
+                Button("Share Itinerary") {
+                    WhatWouldMyCrewDoApp.changeView(to: ViewType.ShareItineraryView)
+                }
+            }
         }
         .padding()
     }

@@ -10,25 +10,31 @@ import SwiftUI
 @main
 struct WhatWouldMyCrewDoApp: App {
     
-    @State var currentView: ViewType = .MainView
+    @State static var currentView: ViewType = .MainView
+    
+    static func changeView(to newView: ViewType) {
+        print("Changing view to \(newView)")
+        WhatWouldMyCrewDoApp.currentView = newView
+    }
     
     var body: some Scene {
         WindowGroup {
-            switch currentView {
-                case .MainView:
-                    MainView()
+            switch WhatWouldMyCrewDoApp.currentView {
+                case ViewType.MainView:
+                        MainView()
 
-                case .RateAndReviewView:
-                    RateAndReviewView()
+                case ViewType.RateAndReviewView:
+                        RateAndReviewView()
 
-                case .PlanTripView:
+                case ViewType.PlanTripView:
                     PlanTripView()
               
-                case .ManageFriendsGroupView:
+                case ViewType.ManageFriendsGroupView:
                     ManageFriendsGroupView()
                     
-                case .ShareItineraryView:
+                case ViewType.ShareItineraryView:
                     ShareItineraryView()
+
             }
         }
     }

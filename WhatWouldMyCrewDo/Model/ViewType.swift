@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ViewType {
+enum ViewType: Int {
     case MainView
     case RateAndReviewView
     case PlanTripView
