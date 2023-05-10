@@ -10,32 +10,37 @@ import SwiftUI
 @main
 struct WhatWouldMyCrewDoApp: App {
     
-    @State static var currentView: ViewType = .MainView
-    
-    static func changeView(to newView: ViewType) {
-        print("Changing view to \(newView)")
-        WhatWouldMyCrewDoApp.currentView = newView
-    }
+    @StateObject var currentState: CurrentState = CurrentState()
     
     var body: some Scene {
         WindowGroup {
-            switch WhatWouldMyCrewDoApp.currentView {
-                case ViewType.MainView:
-                        MainView()
-
-                case ViewType.RateAndReviewView:
-                        RateAndReviewView()
-
-                case ViewType.PlanTripView:
-                    PlanTripView()
-              
-                case ViewType.ManageFriendsGroupView:
-                    ManageFriendsGroupView()
-                    
-                case ViewType.ShareItineraryView:
-                    ShareItineraryView()
-
-            }
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("What Would My Crew Do?").padding()
+                
+                currentView()
+            }.environmentObject(currentState)
+        }
+    }
+    
+    func currentView() -> AnyView {
+        switch currentState.currentView {
+            case ViewType.MainView:
+                return AnyView(MainView())
+                
+            case ViewType.RateAndReviewView:
+                return AnyView(RateAndReviewView())
+                
+            case ViewType.PlanTripView:
+                return AnyView(PlanTripView())
+                
+            case ViewType.ManageFriendsGroupView:
+                return AnyView(ManageFriendsGroupView())
+                
+            case ViewType.ShareItineraryView:
+                return AnyView(ShareItineraryView())
         }
     }
 }
