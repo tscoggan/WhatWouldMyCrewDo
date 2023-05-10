@@ -8,7 +8,7 @@
 import Foundation
 
 enum ViewType: Int {
-    case MainView
+    case TitleScreenView
     case RateAndReviewView
     case PlanTripView
     case ManageFriendsGroupView

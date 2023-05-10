@@ -11,6 +11,8 @@ struct ManageFriendsGroupView: View {
     var body: some View {
         VStack {
             Text("Manage Friends Group view")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
         }
         .padding()
     }

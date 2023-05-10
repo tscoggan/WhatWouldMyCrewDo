@@ -14,33 +14,8 @@ struct WhatWouldMyCrewDoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("What Would My Crew Do?").padding()
-                
-                currentView()
-            }.environmentObject(currentState)
+            RootView().environmentObject(currentState)
         }
     }
     
-    func currentView() -> AnyView {
-        switch currentState.currentView {
-            case ViewType.MainView:
-                return AnyView(MainView())
-                
-            case ViewType.RateAndReviewView:
-                return AnyView(RateAndReviewView())
-                
-            case ViewType.PlanTripView:
-                return AnyView(PlanTripView())
-                
-            case ViewType.ManageFriendsGroupView:
-                return AnyView(ManageFriendsGroupView())
-                
-            case ViewType.ShareItineraryView:
-                return AnyView(ShareItineraryView())
-        }
-    }
 }

@@ -11,6 +11,8 @@ struct PlanTripView: View {
     var body: some View {
         VStack {
             Text("Plan Trip view")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
         }
         .padding()
     }

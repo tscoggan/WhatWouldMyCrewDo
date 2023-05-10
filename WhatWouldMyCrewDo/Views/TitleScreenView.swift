@@ -1,5 +1,5 @@
 //
-//  ShareItineraryView.swift
+//  TitleScreenView.swift
 //  WhatWouldMyCrewDo
 //
 //  Created by Tom Scoggan on 5/10/23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ShareItineraryView: View {
+struct TitleScreenView: View {
     var body: some View {
         VStack {
-            Text("Share Itinerary view")
+            Text("Title Screen")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
         }
@@ -18,8 +18,8 @@ struct ShareItineraryView: View {
     }
 }
 
-struct ShareItineraryView_Previews: PreviewProvider {
+struct TitleScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        ShareItineraryView()
+        TitleScreenView()
     }
 }

@@ -11,6 +11,8 @@ struct RateAndReviewView: View {
     var body: some View {
         VStack {
             Text("Rate & Review view")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
         }
         .padding()
     }

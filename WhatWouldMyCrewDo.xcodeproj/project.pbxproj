@@ -14,12 +14,13 @@
 		14BB1C962A0BB7CC009D247D /* WhatWouldMyCrewDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1C952A0BB7CC009D247D /* WhatWouldMyCrewDoUITests.swift */; };
 		14BB1C982A0BB7CC009D247D /* WhatWouldMyCrewDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1C972A0BB7CC009D247D /* WhatWouldMyCrewDoUITestsLaunchTests.swift */; };
 		14BB1CA62A0BB893009D247D /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CA52A0BB893009D247D /* ViewType.swift */; };
-		14BB1CA92A0BC76E009D247D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CA82A0BC76E009D247D /* MainView.swift */; };
+		14BB1CA92A0BC76E009D247D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CA82A0BC76E009D247D /* RootView.swift */; };
 		14BB1CAB2A0BC80C009D247D /* RateAndReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CAA2A0BC80C009D247D /* RateAndReviewView.swift */; };
 		14BB1CAD2A0BC8DD009D247D /* PlanTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CAC2A0BC8DD009D247D /* PlanTripView.swift */; };
 		14BB1CAF2A0BC964009D247D /* ManageFriendsGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CAE2A0BC964009D247D /* ManageFriendsGroupView.swift */; };
 		14BB1CB12A0BC9A2009D247D /* ShareItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB02A0BC9A2009D247D /* ShareItineraryView.swift */; };
 		14BB1CB32A0BF0AC009D247D /* CurrentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB22A0BF0AC009D247D /* CurrentState.swift */; };
+		14BB1CB52A0C0692009D247D /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB42A0C0692009D247D /* TitleScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +51,13 @@
 		14BB1C952A0BB7CC009D247D /* WhatWouldMyCrewDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatWouldMyCrewDoUITests.swift; sourceTree = "<group>"; };
 		14BB1C972A0BB7CC009D247D /* WhatWouldMyCrewDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatWouldMyCrewDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14BB1CA52A0BB893009D247D /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
-		14BB1CA82A0BC76E009D247D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		14BB1CA82A0BC76E009D247D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		14BB1CAA2A0BC80C009D247D /* RateAndReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAndReviewView.swift; sourceTree = "<group>"; };
 		14BB1CAC2A0BC8DD009D247D /* PlanTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTripView.swift; sourceTree = "<group>"; };
 		14BB1CAE2A0BC964009D247D /* ManageFriendsGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFriendsGroupView.swift; sourceTree = "<group>"; };
 		14BB1CB02A0BC9A2009D247D /* ShareItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareItineraryView.swift; sourceTree = "<group>"; };
 		14BB1CB22A0BF0AC009D247D /* CurrentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentState.swift; sourceTree = "<group>"; };
+		14BB1CB42A0C0692009D247D /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,11 +154,12 @@
 		14BB1CA72A0BC743009D247D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14BB1CA82A0BC76E009D247D /* MainView.swift */,
+				14BB1CA82A0BC76E009D247D /* RootView.swift */,
 				14BB1CAA2A0BC80C009D247D /* RateAndReviewView.swift */,
 				14BB1CAC2A0BC8DD009D247D /* PlanTripView.swift */,
 				14BB1CAE2A0BC964009D247D /* ManageFriendsGroupView.swift */,
 				14BB1CB02A0BC9A2009D247D /* ShareItineraryView.swift */,
+				14BB1CB42A0C0692009D247D /* TitleScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,7 +298,8 @@
 				14BB1CA62A0BB893009D247D /* ViewType.swift in Sources */,
 				14BB1CAD2A0BC8DD009D247D /* PlanTripView.swift in Sources */,
 				14BB1CB12A0BC9A2009D247D /* ShareItineraryView.swift in Sources */,
-				14BB1CA92A0BC76E009D247D /* MainView.swift in Sources */,
+				14BB1CB52A0C0692009D247D /* TitleScreenView.swift in Sources */,
+				14BB1CA92A0BC76E009D247D /* RootView.swift in Sources */,
 				14BB1CAB2A0BC80C009D247D /* RateAndReviewView.swift in Sources */,
 				14BB1C7B2A0BB7CB009D247D /* WhatWouldMyCrewDoApp.swift in Sources */,
 				14BB1CAF2A0BC964009D247D /* ManageFriendsGroupView.swift in Sources */,
