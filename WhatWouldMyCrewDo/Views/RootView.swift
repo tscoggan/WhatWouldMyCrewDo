@@ -33,65 +33,47 @@ struct RootView: View {
                     Button(action: {
                         currentState.changeView(to: ViewType.RateAndReviewView)
                     }) {
-                        RateReviewButtonView()
-                    }
+                        VStack {
+                            Image(systemName: "star.leadinghalf.filled")
+                            Text("Rate")
+                        }
+                    }.buttonStyle(MainButtonStyle())
                     
                     Spacer()
                     
                     Button(action: {
                         currentState.changeView(to: ViewType.PlanTripView)
                     }) {
-                        PlanTripButtonView()
-                    }
+                        VStack {
+                            Image(systemName: "airplane")
+                            Text("Plan Trip")
+                        }
+                    }.buttonStyle(MainButtonStyle())
                     
                     Spacer()
                     
                     Button(action: {
                         currentState.changeView(to: ViewType.ManageFriendsGroupView)
                     }) {
-                        ManageFriendsButtonView()
-                    }
+                        VStack {
+                            Image(systemName: "person.3.fill")
+                            Text("My Crew")
+                        }
+                    }.buttonStyle(MainButtonStyle())
                     
                     Spacer()
                     
                     Button(action: {
                         currentState.changeView(to: ViewType.ShareItineraryView)
                     }) {
-                        ShareItineraryButtonView()
-                    }
+                        VStack {
+                            Image(systemName: "square.and.arrow.up")
+                            Text("Share")
+                        }
+                    }.buttonStyle(MainButtonStyle())
                 }
             }
         }.preferredColorScheme(.dark)
-    }
-}
-
-
-
-struct RateReviewButtonView: View {
-    var body: some View {       
-        Label("Rate", systemImage: "star.leadinghalf.filled")
-            .labelStyle(ButtonLabelStyle())
-    }
-}
-
-struct PlanTripButtonView: View {
-    var body: some View {
-        Label("Plan Trip", systemImage: "airplane")
-            .labelStyle(ButtonLabelStyle())
-    }
-}
-
-struct ManageFriendsButtonView: View {
-    var body: some View {
-        Label("My Crew", systemImage: "person.3.fill")
-            .labelStyle(ButtonLabelStyle())
-    }
-}
-
-struct ShareItineraryButtonView: View {
-    var body: some View {
-        Label("Share", systemImage: "square.and.arrow.up")
-            .labelStyle(ButtonLabelStyle())
     }
 }
 

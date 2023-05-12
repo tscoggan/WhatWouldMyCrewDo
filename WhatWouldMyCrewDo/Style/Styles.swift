@@ -11,22 +11,20 @@ struct Styles {
     static let buttonRadius: CGFloat = 15
 }
 
-struct ButtonLabelStyle: LabelStyle {
+struct MainButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        VStack {
-            configuration.icon
-            configuration.title
-        }
-            //.padding()
-            .frame(width: 75, height: 75)
-            .background(Colors.buttonBackground)
-            .cornerRadius(Styles.buttonRadius)
+        configuration.label
+            .padding()
+            .background(configuration.isPressed ? Colors.buttonBackground.opacity(0.5) : Colors.buttonBackground)
             .foregroundColor(Colors.buttonForeground)
+            .clipShape(RoundedRectangle(cornerRadius: Styles.buttonRadius, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: Styles.buttonRadius)
                     .stroke(Colors.buttonBorder, lineWidth: 3)
             )
-
+            .scaleEffect(configuration.isPressed ? 0.9 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+            .shadow(color: .gray, radius: 2, x: 0, y: 2)
     }
 }
 
