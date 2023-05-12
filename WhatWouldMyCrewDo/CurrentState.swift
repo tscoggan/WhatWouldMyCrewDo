@@ -13,9 +13,6 @@ class CurrentState: ObservableObject {
     @Published var currentView: ViewType = .TitleScreenView
     
     func changeView(to newView: ViewType) {
-        if (currentView != newView) {
-            print("Changing view from \(currentView) to \(newView)")
-        }
         currentView = newView
     }
     

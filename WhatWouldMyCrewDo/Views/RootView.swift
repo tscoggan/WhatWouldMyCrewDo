@@ -12,72 +12,86 @@ struct RootView: View {
     @EnvironmentObject var currentState: CurrentState
     
     var body: some View {
-        VStack {
-                       
-            HStack(alignment: .top, spacing: 10.0) {
-               
-                Button(action: {
-                    currentState.changeView(to: ViewType.RateAndReviewView)
-                }) {
-                    Text("Rate / Review")
-                        .font(.title3)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 5)
-                        )
-                }
-                
-                Button(action: {
-                    currentState.changeView(to: ViewType.PlanTripView)
-                }) {
-                    Text("Plan a Trip")
-                        .font(.title3)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 5)
-                        )
-                }
-                
-                Button(action: {
-                    currentState.changeView(to: ViewType.ManageFriendsGroupView)
-                }) {
-                    Text("My Friends")
-                        .font(.title3)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 5)
-                        )
-                }
-                
-                Button(action: {
-                    currentState.changeView(to: ViewType.ShareItineraryView)
-                }) {
-                    Text("Share Itinerary")
-                        .font(.title3)
-                        .foregroundColor(.blue)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 5)
-                        )
-                }
-            }.padding()
+        NavigationStack {
             
-            switch currentState.currentView {
-                case .TitleScreenView: TitleScreenView()
-                case .RateAndReviewView: RateAndReviewView()
-                case .PlanTripView: PlanTripView()
-                case .ManageFriendsGroupView: ManageFriendsGroupView()
-                case .ShareItineraryView: ShareItineraryView()
+            ZStack {
+                
+                Colors.appBackground.ignoresSafeArea()
+                
+                switch currentState.currentView {
+                    case .TitleScreenView: TitleScreenView()
+                    case .RateAndReviewView: RateAndReviewView()
+                    case .PlanTripView: PlanTripView()
+                    case .ManageFriendsGroupView: ManageFriendsGroupView()
+                    case .ShareItineraryView: ShareItineraryView()
+                }
+                
             }
-        }
-        .padding()
+            .foregroundColor(Colors.appForeground)
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {
+                        currentState.changeView(to: ViewType.RateAndReviewView)
+                    }) {
+                        RateReviewButtonView()
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        currentState.changeView(to: ViewType.PlanTripView)
+                    }) {
+                        PlanTripButtonView()
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        currentState.changeView(to: ViewType.ManageFriendsGroupView)
+                    }) {
+                        ManageFriendsButtonView()
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        currentState.changeView(to: ViewType.ShareItineraryView)
+                    }) {
+                        ShareItineraryButtonView()
+                    }
+                }
+            }
+        }.preferredColorScheme(.dark)
+    }
+}
+
+
+
+struct RateReviewButtonView: View {
+    var body: some View {       
+        Label("Rate", systemImage: "star.leadinghalf.filled")
+            .labelStyle(ButtonLabelStyle())
+    }
+}
+
+struct PlanTripButtonView: View {
+    var body: some View {
+        Label("Plan Trip", systemImage: "airplane")
+            .labelStyle(ButtonLabelStyle())
+    }
+}
+
+struct ManageFriendsButtonView: View {
+    var body: some View {
+        Label("My Crew", systemImage: "person.3.fill")
+            .labelStyle(ButtonLabelStyle())
+    }
+}
+
+struct ShareItineraryButtonView: View {
+    var body: some View {
+        Label("Share", systemImage: "square.and.arrow.up")
+            .labelStyle(ButtonLabelStyle())
     }
 }
 
