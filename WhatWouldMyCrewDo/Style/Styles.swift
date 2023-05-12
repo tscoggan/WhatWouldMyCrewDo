@@ -28,6 +28,19 @@ struct MainButtonStyle: ButtonStyle {
     }
 }
 
+extension View {
+    func addSelectedBadge(_ isSelected: Bool) -> some View {
+        ZStack(alignment: .topTrailing) {
+            self
+
+            if isSelected {
+                Image(systemName: "checkmark.circle.fill")
+                    .offset(x: 3, y: -3)
+            }
+        }
+    }
+}
+
 struct Styles_Previews: PreviewProvider {
     static var previews: some View {
         RootView().environmentObject(CurrentState())

@@ -38,6 +38,7 @@ struct RootView: View {
                             Text("Rate")
                         }
                     }.buttonStyle(MainButtonStyle())
+                    .addSelectedBadge(currentState.currentView == ViewType.RateAndReviewView)
                     
                     Spacer()
                     
@@ -49,6 +50,7 @@ struct RootView: View {
                             Text("Plan Trip")
                         }
                     }.buttonStyle(MainButtonStyle())
+                    .addSelectedBadge(currentState.currentView == ViewType.PlanTripView)
                     
                     Spacer()
                     
@@ -60,6 +62,7 @@ struct RootView: View {
                             Text("My Crew")
                         }
                     }.buttonStyle(MainButtonStyle())
+                    .addSelectedBadge(currentState.currentView == ViewType.ManageFriendsGroupView)
                     
                     Spacer()
                     
@@ -71,6 +74,7 @@ struct RootView: View {
                             Text("Share")
                         }
                     }.buttonStyle(MainButtonStyle())
+                    .addSelectedBadge(currentState.currentView == ViewType.ShareItineraryView)
                 }
             }
         }.preferredColorScheme(.dark)
