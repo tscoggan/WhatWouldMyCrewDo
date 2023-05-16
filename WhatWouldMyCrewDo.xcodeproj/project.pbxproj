@@ -23,6 +23,7 @@
 		14BB1CB52A0C0692009D247D /* TitleScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB42A0C0692009D247D /* TitleScreenView.swift */; };
 		14BB1CB82A0E9697009D247D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB72A0E9697009D247D /* Colors.swift */; };
 		14BB1CBA2A0EA0AD009D247D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CB92A0EA0AD009D247D /* Styles.swift */; };
+		14BB1CBE2A10319A009D247D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB1CBD2A10319A009D247D /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		14BB1CB42A0C0692009D247D /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
 		14BB1CB72A0E9697009D247D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		14BB1CB92A0EA0AD009D247D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		14BB1CBD2A10319A009D247D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				14BB1CAE2A0BC964009D247D /* ManageFriendsGroupView.swift */,
 				14BB1CB02A0BC9A2009D247D /* ShareItineraryView.swift */,
 				14BB1CB42A0C0692009D247D /* TitleScreenView.swift */,
+				14BB1CBD2A10319A009D247D /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				14BB1CBA2A0EA0AD009D247D /* Styles.swift in Sources */,
 				14BB1CB32A0BF0AC009D247D /* CurrentState.swift in Sources */,
+				14BB1CBE2A10319A009D247D /* MapView.swift in Sources */,
 				14BB1CB82A0E9697009D247D /* Colors.swift in Sources */,
 				14BB1CA62A0BB893009D247D /* ViewType.swift in Sources */,
 				14BB1CAD2A0BC8DD009D247D /* PlanTripView.swift in Sources */,
@@ -477,6 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhatWouldMyCrewDo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D954Z936U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -505,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WhatWouldMyCrewDo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D954Z936U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
