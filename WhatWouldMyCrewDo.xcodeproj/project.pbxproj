@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14AF8B622A14764E00D49529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		14BB1C772A0BB7CB009D247D /* WhatWouldMyCrewDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatWouldMyCrewDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BB1C7A2A0BB7CB009D247D /* WhatWouldMyCrewDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatWouldMyCrewDoApp.swift; sourceTree = "<group>"; };
 		14BB1C7E2A0BB7CC009D247D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		14BB1C792A0BB7CB009D247D /* WhatWouldMyCrewDo */ = {
 			isa = PBXGroup;
 			children = (
+				14AF8B622A14764E00D49529 /* Info.plist */,
 				14BB1C7A2A0BB7CB009D247D /* WhatWouldMyCrewDoApp.swift */,
 				14BB1CB22A0BF0AC009D247D /* CurrentState.swift */,
 				14BB1CA72A0BC743009D247D /* Views */,
@@ -484,6 +486,11 @@
 				DEVELOPMENT_TEAM = 7D954Z936U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatWouldMyCrewDo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location data required to show a map of your area";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +520,11 @@
 				DEVELOPMENT_TEAM = 7D954Z936U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatWouldMyCrewDo/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Location data required to show a map of your area";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location data required to show a map of your area";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

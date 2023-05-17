@@ -13,6 +13,7 @@ struct RateAndReviewView: View {
             Text("Rate & Review view")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
+            MapView()
         }
         .padding()
     }
