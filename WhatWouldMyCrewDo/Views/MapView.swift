@@ -23,12 +23,20 @@ struct MapView: UIViewRepresentable {
         locMgrDelegate.setMapView(self)
         locationManager.delegate = locMgrDelegate
         let mv =  MKMapView(frame: .zero)
-        locMgrDelegate.setMKMapView(mv)
+        mv.showsUserLocation = true
+        updateMap(mv)
         return mv
     }
     
     func updateUIView(_ view: MKMapView, context: Context){
-        
+        updateMap(view)
+    }
+    
+    func setUserLocationAuth(_ isAuthorized: Bool) {
+        currentState.userLocationIsAuthorized = isAuthorized
+    }
+    
+    private func updateMap(_ view: MKMapView) {
         var coordinate: CLLocationCoordinate2D {
             switch currentState.userLocationIsAuthorized {
                 case true:
@@ -46,10 +54,6 @@ struct MapView: UIViewRepresentable {
         view.setRegion(region, animated: true)
     }
     
-    func setUserLocationAuth(_ isAuthorized: Bool) {
-        currentState.userLocationIsAuthorized = isAuthorized
-    }
-    
 }
 
 class LocationMgrDelegate: NSObject, CLLocationManagerDelegate {
@@ -58,14 +62,8 @@ class LocationMgrDelegate: NSObject, CLLocationManagerDelegate {
     
     var mapView: MapView?
     
-    var mv: MKMapView?
-    
     func setMapView(_ mv: MapView) {
         self.mapView = mv
-    }
-    
-    func setMKMapView(_ mv: MKMapView) {
-        self.mv = mv
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -73,7 +71,6 @@ class LocationMgrDelegate: NSObject, CLLocationManagerDelegate {
             switch mapView!.locationManager.authorizationStatus {
               case .authorizedWhenInUse:
                 mapView!.setUserLocationAuth(true)
-                mv?.showsUserLocation = true
               case .denied: // Show alert telling users how to turn on permissions
                 print("authorizationStatus: denied")
                 mapView!.setUserLocationAuth(false)
@@ -87,7 +84,6 @@ class LocationMgrDelegate: NSObject, CLLocationManagerDelegate {
                 break
               case .authorizedAlways:
                 mapView!.setUserLocationAuth(true)
-                mv!.showsUserLocation = true
                 break
               @unknown default:
                 fatalError("Unknown CLLocationManager.authorizationStatus")
