@@ -16,4 +16,6 @@ class CurrentState: ObservableObject {
         currentView = newView
     }
     
+    var userLocationIsAuthorized: Bool = false
+    
 }
